@@ -1,0 +1,190 @@
+/* pages/user/yuyue.wxss */
+/* pages/user/dingdan.wxss */
+page{
+  background: #f5f5f5;
+}
+.swiper-tab{  
+    width: 100%;  
+    border-bottom: 1px solid #eee;  
+    text-align: center;  
+    line-height: 80rpx;
+    background: #fff;  
+    position: fixed;
+    top: 0;  
+    z-index: 999;
+    }  
+.swiper-tab-list{  
+  font-size: 24rpx;  
+  display: inline-block;  
+  width: 30%;  
+  color: #666;  
+  }  
+.on{ 
+  color: #dd2727;  
+  border-bottom: 5rpx solid #dd2727;
+  }  
+  
+.swiper-box{ 
+  display: block; 
+  height: 100%; 
+  width: 100%; 
+  overflow: hidden; 
+  }  
+
+.clearbutton{
+    background: #fff; 
+    display: inline-block;
+    margin:3% 3% 2% 3%; 
+    color: #dd2727;
+    font-size: 28rpx;
+    width: 94%;
+}
+.shop{
+    background: #fff;
+    /* padding: 26rpx; */
+    /* margin-bottom: 10px; */
+    height: 360rpx;
+    position: relative;
+    width: 700rpx;
+    margin: 26rpx;
+    box-shadow: 0px 2px 4px 0px #E8DEFB;
+}
+.shop checkbox{ 
+    margin-top: 27px;
+    }
+.sh_slt{
+    /* width: 80px; */
+    /* height: 80px; */
+    height: 100rpx;
+    width: 100rpx;
+    margin-top: 30rpx;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-right: 22rpx;
+    float: left;
+    margin-left: 26rpx;
+}
+.sp_text{
+    float: left;
+    line-height: 40rpx;
+    width: 100%;
+    text-align: left;
+    }
+.sp_tit{
+    width: 100%;
+    overflow: hidden;
+    font-size: 28rpx;
+}
+.sp_neb{
+    width: 100%;
+    overflow: hidden;
+    font-size: 24rpx;
+    color: #B69DEA;
+}
+.sp_jg{
+    width: 100%;
+    overflow: hidden;
+    font-size: 28rpx;
+    color: #fc0628;
+}
+.dle{
+    color: #999;
+    font-size: 24rpx;
+    float: right;
+}
+.dle image{
+    width: 36rpx;
+    height: 36rpx;
+    vertical-align: sub;
+}
+.jk_bottom{
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    width: 100%; 
+    display: inline-flex;
+    border-bottom: 1px solid #eee; 
+    font-size: 28rpx;
+    color: #999;       
+}
+.jk_bottom checkbox{
+    margin: 4% 0 4% 4%;    
+}
+.jk_bottom .heji{
+    margin-top: 5.5%;
+    width: 30%; 
+    text-align: right;   
+}
+.jk_bottom .all{
+    margin-top: 5.5%;
+    padding-left: 2%;  
+}
+.jk_bottom .js_button{
+    background: #dd2727;
+    float: right;
+    color: #fff;
+    font-size: 32rpx;
+    text-align: center;
+    width: 40%;
+    position: absolute;
+    right: 0;
+    line-height: 100rpx;
+}
+.c_t60{
+    clear: both;
+    height: 1px;
+    padding-top: 96rpx;
+}
+.blue{
+  color: #42b1ff;
+}
+.mr_5{
+    margin-right: 20rpx;
+    line-height: 52rpx;
+    color: #fff;
+}
+.sh-slt-k{
+  height: 158rpx;
+  width: 700rpx;
+  /* background: pink; */
+  border-bottom: 1rpx solid #D0D0D0;
+}
+.sh_slt_r{
+  float: left;
+  /* background: yellow; */
+  margin-top: 38rpx;
+}
+.sh_slt_r2{
+  height: 52rpx;
+  width: 140rpx;
+  background: #B69DEA;
+  float: right;
+  border-radius: 200rpx;
+  margin-top: 54rpx;
+  margin-right: 26rpx;
+}
+.fw-jj{
+  height: 200rpx;
+  width: 700rpx;
+  /* background: yellowgreen; */
+  position: absolute;
+  top: 158rpx;
+}
+.fw_name{
+  height: 36rpx;
+  width: 644rpx;
+  /* background: yellow; */
+  margin-left: 26rpx;
+  margin-top: 22rpx;
+}
+.fw_name_l{
+  font-size: 26rpx;
+  color: #666666;
+  float: left;
+}
+.fw_name_r{
+  font-size: 26rpx;
+  color: #151515;
+  float: left;
+  overflow: hidden;
+}

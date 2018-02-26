@@ -1,0 +1,62 @@
+<!-- <import src="/dist/loadmore/index.wxml" /> -->
+<!-- <template is="zan-loadmore" data="{{loading: isLoading}}" /> -->
+<view>
+  <view class='head'>
+    <view class='head_title'>{{ctzq.info.newtite}}</view>
+    <!-- <image src='/image/pailie.png'></image> -->
+  </view>
+  <!-- 类型 -->
+  <scroll-view class="types" scroll-y="true" style="height:{{scrollHeight}}px;">
+    <view wx:key="" wx:for="{{typeData}}" class="type {{current == typeData[index].tid ? 'active' : ''}}" bindtap="tapTpye" data-current="{{typeData[index].tid}}">
+      <view class="border"></view> 
+      <text>{{typeData[index].name}}</text>
+    </view>
+  </scroll-view>
+  <!-- 商品 -->
+  <view class="container" style="min-height:90%;">
+    <view class="list">
+      <view class="goods-wrap"   wx:key="" wx:for="{{goodData.goods}}" data-gid="{{goodData.goods[index].gid}}">
+      <navigator hover-class="none" url="../detail/detail?current={{current}}&gid={{goodData.goods[index].gid}}">
+        <block wx:if="{{goodData.goods[index].pic}}">
+          <image class="goods-img" src="{{goodData.goods[index].pic}}"></image>
+        </block>
+        <block wx:else>
+          <image class="goods-img" src="/image/cykb.png"></image>
+        </block>
+        <view class="text">
+          <!-- 商品名 -->
+          <view class="title">
+            <text>{{goodData.goods[index].name}}</text>
+          </view>
+          <!-- 商品介绍 -->
+          <view class="title_s">
+            <text>{{goodData.goods[index].name}}</text>
+          </view>
+          <!-- 价格 -->
+          <view class="price">
+            <text class="new">￥{{goodData.goods[index].currentPrice}}</text>
+            <!-- <text class="old">￥{{goodData.goods[index].originalPrice}}</text> -->
+            <!--加减号  -->
+            <view class="cart-count-box">
+              <text class="cart-count-down count" catchtap="minusCount" data-obj="{{obj}}"data-index="{{index}}" data-current="{{current}}">-</text>
+              <text class="cart-count-num">{{goodData.goods[index].num}}</text>
+              <text class="cart-count-add add" catchtap="addCount" data-index="{{index}}" data-current="{{current}}">+</text>
+            </view>
+          </view>
+        </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <!-- footer -->
+  <view class='footer'>
+    <view class='footer_l'>
+      <view class='jishu'>
+        <image src='/image/diancan_bg.png'></image>
+        <view class='jishu_num'>{{z_num}}</view>
+      </view>
+      <view class='totalPrice'>￥{{totalPrice}}</view>
+    </view>
+    <view class='footer_r' bindtap="go">点好了</view>
+  </view>
+</view>

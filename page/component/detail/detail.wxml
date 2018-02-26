@@ -1,0 +1,71 @@
+<view class='main'>
+
+  <view class="con" >
+  <block wx:if="{{pic!=''}}" >
+     <image src='{{pic}}'></image> 
+  </block>
+   <block wx:else>
+      <image src="/image/cykb.png"></image>
+   </block>
+  </view>
+ 
+  <view class='con_c'>
+    <view class='con_name'>{{name}}</view>
+    <!-- <view class='con_b'>
+      <view class='con_ll'>¥32</view>
+      <view class='con_rr'></view>
+    </view> -->
+    <view class="price">
+      <text class="new">{{price}}</text>
+            <!-- <text class="old">￥{{goodData.goods[index].originalPrice}}</text> -->
+            
+      <view class="cart-count-box">
+        <text class="cart-count-down count" bindtap="minusCount" data-obj="{{obj}}" data-index="{{index}}" data-current="{{current}}" data-gid="{{gid}}">-</text>
+        <text class="cart-count-num">{{num}}</text>
+        <text class="cart-count-add add" bindtap="addCount" data-index="{{index}}" data-current="{{current}}" data-gid="{{gid}}">+</text>
+       </view>
+    </view>
+  </view>
+  <!--  选项  -->
+  <block wx:if="{{z_type.length>1}}">
+  <view class='seleted'>选项</view>
+  <view class='seleted_con'>
+  <radio-group class="radio-group" bindchange="radioChange">
+  <label class="radio" wx:key="{{index}}" wx:for="{{z_type}}">
+   <view class='seleted_li'>
+      <view class='seleted_l'>{{item.name}}</view>
+      <view class='xuan'><radio value="{{item.name}}" checked="{{item.checked}}"></radio></view>
+    </view>
+    
+  </label>
+  </radio-group>
+    <!-- <view class='seleted_li'>
+      <view class='seleted_l'>不辣</view>
+      <view class='xuan'></view>
+    </view>
+    <view class='seleted_li'>
+      <view class='seleted_l'>微辣</view>
+      <view class='xuan'></view>
+    </view>
+    <view class='seleted_li'>
+      <view class='seleted_l'>中辣</view>
+      <view class='xuan'></view>
+    </view> -->
+  </view>
+  </block>
+   <block wx:else></block>
+  <view class='footer'>
+  <!-- ￥{{totalPrice}}j{{z_num}} -->
+    <view class='footer_l'>
+      <view class='jishu'>
+        <image src='/image/diancan_bg.png'></image>
+        <view class='jishu_num'>{{num}}</view>
+        
+      </view>
+      <view class='totalPrice'>￥{{z_price}}</view>
+    </view>
+    <!-- <navigator url="../liebiao2/liebiao2"> -->
+        <view class='footer_r' bindtap="go" data-index="{{index}}" data-current="{{current}}" data-gid="{{gid}}">点好了</view>
+    <!-- </navigator> -->
+  </view>
+</view>

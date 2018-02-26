@@ -1,0 +1,57 @@
+<view class="main">
+  <!-- 轮播图 -->
+  <swiper indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{list.ggtop}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item.photo}}" class="slide-image" width="100%"/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!--地址-->
+  <!-- <view class="company">
+    <view class="item-desc">
+      <view class="desc-l">
+        <view class="title text-ellipsis" bindtap="watchAddress">{{ctzq.info.newtite}}</view>
+        <view class="info" bindtap="watchAddress">地址:{{ctzq.info.newaddress}}</view>
+      </view>
+      <view class="desc-r" bindtap="calling">
+        <image class="authentication" src="/image/contact2.png" />
+      </view>
+    </view>
+  </view> -->
+
+  <!-- 领优惠券 -->
+  <view wx:if="{{list.activity==1}}" class='lyhj'>
+    <navigator url="ritual/ritual">
+      <image src='/image/lyhj.png'></image>
+    </navigator>
+  </view>
+  <view wx:else class='lyhj' style='display:none'>
+  </view>
+  <!--推荐菜品-->
+   <view class="select-title"><text>推荐菜品</text></view> 
+    <view class="newest">
+      <view class="newest-box">
+        <view class="newest-list" wx:key="" wx:for="{{list.prolist}}">
+          <navigator url="detail/detail?current={{item.tid}}&gid={{item.id}}">
+            <block wx:if="{{item.photo_x}}">  
+              <image src="{{item.photo_x}}"></image>  
+            </block>  
+            <block wx:else>  
+              <image src="/image/cykb.png"></image>  
+            </block>  
+            <view class="newest-text newest-text-name"><text>{{item.name}} </text></view>
+             <view class="newest-text newest-text-price"><text>￥ {{item.price_yh}}</text></view> 
+          </navigator>
+        </view>
+            <!-- <view class="newest-list">
+                <navigator url="details/details">
+                    <image src="/image/shouye-pic@2x.png"></image>
+                    <view class="newest-text newest-text-name"><text>芹菜 半斤</text></view>
+                    <view class="newest-text newest-text-price"><text>￥ 0.02</text></view>
+                </navigator>
+            </view> -->
+        </view>
+    </view>
+</view>

@@ -1,0 +1,10 @@
+<!--page/component/payover/payover.wxml-->
+<view class='main'>
+  <view class="top">
+    <image src='/image/wancheng.png'></image>
+  </view>
+  <view class='success'>恭喜您，订单支付成功！</view>
+  <view class='name'>Ccli西西里餐厅</view>
+  <view class='price'>¥128.00</view>
+  <view class='over'>完成</view>
+</view>

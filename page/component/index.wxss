@@ -1,0 +1,127 @@
+@import '../common/common.wxss';
+.main{
+  background: #f5f5f5;
+}
+swiper {
+    height: 380rpx;
+}
+swiper-item image {
+    width: 100%;
+    height: 100%;
+}
+
+.select-title,.newest-title{
+    width: 100%;
+    padding:30rpx 0;
+    height: 40rpx;
+    color: #F3C313;
+    text-align: center;
+}
+.select-top-small{
+    width: 375rpx;
+    height: 375rpx;
+    float: left;
+}
+.select-bottom,.select-top{
+    width: 100%;
+    height: 375rpx;
+}
+.select-top-small image,.select-bottom image,.select-top-small navigator,.select-bottom navigator{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.newest-box{
+    padding:32rpx 0 32rpx 26rpx;
+}
+.newest-box .newest-list{
+    /* display: inline-block; */
+    width: 336rpx;
+    height: 400rpx;
+    margin:0 26rpx 32rpx 0;
+    /* border-radius: 10px; */
+    text-align: center;
+    /* background: #f5f6f5; */
+    float: left;
+}
+.newest-box .newest-list:nth-child(2n){
+    margin-right: 0;
+}
+.newest-box .newest-list image{
+    width: 336rpx;
+    height: 260rpx;
+    /* margin: 20rpx 0 10rpx; */
+}
+.newest-box .newest-list .newest-text{
+    font-size: 32rpx;
+    text-align: left;
+}
+.newest-text-name{
+  font-size: 26rpx;
+  color: #333333;
+   /* background: pink;  */
+    margin-top: 20rpx;    
+}
+.newest-text-price{
+  font-size: 14px;
+  color: #F53A3A;
+  margin-top: 10rpx;
+   /* background: yellow;  */
+}
+.company {
+  /* display: flex; */
+  /* border-bottom: 1px solid #e8e8e8; */
+  min-height: 10px;
+  padding: 15px;
+  background: #fff;
+}
+
+.company .item-desc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.company .item-desc .desc-l {
+  flex-grow: 1;
+  /* max-width: 80%; */
+  max-width: 82%;
+  border-right: 1rpx solid #D8D8D8;
+}
+
+.company .item-desc .desc-l .title {
+  margin-bottom: 5px;
+  color: #F3C313;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.company .item-desc .desc-l .info {
+  color: #333333;
+  font-size: 12px;
+}
+
+.company .item-desc .desc-r {
+  flex-shrink: 0;
+  margin-top: 10px;
+  width: 33px;
+  height: 29px;
+}
+
+.company .item-desc .desc-r .authentication {
+  width: 25px;
+  height: 25px;
+}
+.newest{
+  background: #fff;
+}
+.lyhj{
+  height: 160rpx;
+  width: 100%;
+  /* background: pink; */
+  margin-top: 10rpx;
+}
+.lyhj image{
+  height: 160rpx;
+  width: 100%;
+}
